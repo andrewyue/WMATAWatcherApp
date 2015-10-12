@@ -1,0 +1,107 @@
+<!{{ url_for('static',filename='wmatamap.jpg')}}>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WMATA Watcher - Real-time predicted Metrorail delays</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- CSS
+        ================================================== -->
+    <!-- Bootstrap 3-->
+    <link href={{ url_for('static',filename='css/bootstrap.min.css')}} rel="stylesheet" media="screen">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Template Styles -->
+    <link href={{ url_for('static',filename='css/style.css')}} rel="stylesheet" media="screen">
+      </head>
+  <body>
+
+
+
+
+	   <!-- HEADER
+	   ================================================== -->
+	  <header>
+		 <div class="container">
+			 <div class="row">
+				 <div class="col-md-12">
+					  <h1>WMATA Watcher</h1>
+					  <h2>PREDICTED METRORAIL DELAYS</h2>
+         <table style ="width:100%">
+         	<col align="center">
+         	<col align="center">
+         	<col align="center">
+         	<tr><th><h3><center>Prediction based on Tweets and time information from<br>
+         							{{timestring}}:</center></h3></th>
+         		<th><h3><center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center></h3></th>
+         		<th><h3><center>Most recent Tweets on search terms</center></h3></th>
+				</tr>
+         	<tr><th><h1><center><font color="{{color}}">{{prediction}}</font></center></h1>
+         					<h4><center>Investigate Twitter stream for further information</center></h4>
+						</th>
+				<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+         <th><a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=%40wmata%20OR%20%23wmata%20OR%20%40unsuckdcmetro%20OR%20%23unsuckdcmetro%20OR%20%40fixwmata%20OR%20%40dcmetrosucks%20OR%20%40metrorage%20OR%20%40overhaulmetro%20OR%20%23metrorailinfo%20OR%20%40metrorailinfo%20OR%20%23metrofailinfo%20OR%20%40metrofailinfo%20OR%20%40drgridlock" data-widget-id="647890419464978434">Tweets about @wmata OR #wmata OR @unsuckdcmetro OR #unsuckdcmetro OR @fixwmata OR @dcmetrosucks OR @metrorage OR @overhaulmetro OR #metrorailinfo OR @metrorailinfo OR #metrofailinfo OR @metrofailinfo OR @drgridlock</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></th></tr></table>
+
+            <p class="moretext">Helpful links: <a href="https://github.com/andrewyue/WMATAWatcher/blob/master/README.md"><b>Why Make WMATA Watcher?</b></a> | <a href="https://github.com/andrewyue/WMATAWatcher/blob/master/Week5Demo.ipynb"><b>How WMATA Watcher Works</b></a> | <a href="http://wmata.com/rider_tools/metro_service_status/rail_Bus.cfm?#rail">Official WMATA Rail Status</a> | <a href="https://twitter.com/metrorailinfo">Official WMATA Alerts on Twitter</a></p>
+				</div>
+			</div>
+		</div>
+	 </header>
+
+
+	 <!-- SOCIAL
+	     ================================================== -->
+<!--	  <section class="social">
+	  	<div class="container">
+	  		  <div class="row">
+	  			  <div class="col-md-12">
+	  			  	<h2>Connect with us</h2>
+	  			   	<a class="icon-facebook"></a>
+	  			   	<a class="icon-twitter"></a>
+	  			   	<a class="icon-google"></a>
+	  			   	<a class="icon-instagram"></a>
+	  			   	<a class="icon-pinterest"></a>
+	  			   </div>
+	  		  </div>
+	  	  </div>
+	  </section>
+-->
+
+	 <!-- GET IT
+	     ================================================== -->
+<!--	  <section class="get-it">
+	  	<div class="container">
+	  		<div class="row">
+	  			<div class="col-md-12">
+	  				<h1>Avaialable now on the App Store</h1>
+	  				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+	  				<button type="button" class="app-store"></button>
+	  			</div>
+	  			<div class="col-md-12">
+	  				<hr />
+		  			<ul>
+	                	<li><a href="#link-here">Contact</a></li>
+	                	<li><a href="#link-here">Twitter</a></li>
+	                	<li><a href="#link-here">Press</a></li>
+	                	<li><a href="#link-here">Support</a></li>
+	                	<li><a href="#link-here">Developers</a></li>
+	                	<li><a href="#link-here">Privacy</a></li>
+                	</ul>
+	  			</div>
+	  		</div>
+	  	</div>
+	  </section>
+-->
+
+	 <!-- JAVASCRIPT
+	     ================================================== -->
+    <script src={{ url_for('static',filename='js/jquery.js')}}></script>
+    <script src={{ url_for('static',filename='js/bootstrap.min.js')}}></script>
+    <script src={{ url_for('static',filename='js/animatescroll.js')}}></script>
+    <script src={{ url_for('static',filename='js/scripts.js')}}></script>
+    <script src={{ url_for('static',filename='js/retina.min.js')}}></script>
+
+</html>
