@@ -6,7 +6,6 @@ import datetime
 import re
 import pandas as pd
 
-# Get Twitter keys from environment variables (pls)
 
 CONSUMER_KEY = os.environ['TWITTER_CONSUMER_KEY']
 CONSUMER_SECRET = os.environ['TWITTER_CONSUMER_SECRET']
